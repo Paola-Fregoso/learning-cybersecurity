@@ -1,0 +1,239 @@
+# Marcos Metodológicos Profesionales en Ciberseguridad
+
+## OSSTMM - Open Source Security Testing Methodology Manual
+
+Manual de metodología científica y estándar internacional para realizar pruebas de penetración en redes y evaluación de vulnerabilidades.  
+
+Las metodologías que ofrece están diseñadas para evaluar la seguridad de sistemas como control industrial, redes y aplicaciones web.  
+
+Está dirigida al área de pentesting debido a su flexibilidad para adaptarse a distintas tecnologías, y también al área de administración de red, ya que brinda una guía completa para su gestión.  
+
+Está conformado por 6 secciones principales.  
+
+El manual está disponible en: www.isecom.org  
+
+---
+
+## PTES - Penetration Testing Execution Standard
+
+Guía integral que incluye todas las etapas para realizar pruebas de penetración en sistemas, redes y aplicaciones, definiendo objetivos, alcances y entregables de auditoría.
+
+### Etapas de PTES
+
+1. **Pre-ataque**  
+   Planificación del proyecto, alcance y objetivos.  
+
+2. **Recolección de información**  
+   Identificación de sistemas, redes y aplicaciones.  
+
+3. **Detección de vulnerabilidades**  
+   Identificación de posibles fallas de seguridad.  
+
+4. **Explotación**  
+   Prueba de vulnerabilidades para validar ataques.  
+
+5. **Post-explotación**  
+   Análisis del impacto o daño causado.  
+
+6. **Generación de informes**  
+   Documentación de hallazgos y recomendaciones.  
+
+7. **Limpieza**  
+   Eliminación de rastros y restauración del sistema.  
+
+---
+
+## Cyber Kill Chain
+
+Modelo que describe las 7 etapas que siguen los atacantes durante un ciberataque, basado en estrategias militares adaptadas al entorno digital.
+
+Su implementación permite detectar ataques en etapas tempranas y reducir riesgos.
+
+---
+
+## MITRE ATT&CK
+
+Marco que organiza tácticas y técnicas de ataque en una matriz para evaluar riesgos y fortalecer la seguridad.
+
+### Tácticas principales
+
+1. Acceso inicial  
+2. Ejecución  
+3. Persistencia  
+4. Escalamiento de privilegios  
+5. Evasión de defensa  
+6. Acceso a credenciales  
+7. Descubrimiento  
+8. Movimiento lateral  
+9. Recopilación  
+10. Exfiltración  
+11. Impacto  
+
+---
+
+# Conceptos y Herramientas
+
+## Nmap Scanner
+
+Herramienta de código abierto para escaneo de redes, identificación de puertos abiertos, servicios y sistemas operativos.
+
+Permite analizar direcciones IP o rangos de red y obtener información sobre:
+- Puertos abiertos  
+- Servicios activos  
+- Versiones  
+- Protocolos  
+
+---
+
+## Descubrimiento de Servicios Ocultos
+
+Existen técnicas para identificar servicios ocultos como:
+- Subdominios  
+- Directorios  
+- APIs  
+- Puertos no estándar  
+
+### Herramientas comunes
+- Subfinder  
+- OWASP Amass  
+- The Harvester  
+- Sherlock  
+- Nmap  
+- RustScan  
+- Wireshark  
+- Ffuf  
+- Feroxbuster  
+- Gobuster  
+- Burp Suite  
+- Nessus  
+- OpenVAS  
+
+---
+
+## Movimiento Lateral
+
+Técnica que permite desplazarse dentro de una red después de comprometer un sistema.
+
+### Objetivos
+- Acceder a otros sistemas  
+- Escalar privilegios  
+- Obtener información crítica  
+
+---
+
+## Reverse Shell y Bind Shell
+
+### Reverse Shell
+El sistema comprometido se conecta al atacante, permitiendo acceso remoto y evasión de firewall.
+
+### Bind Shell
+El atacante se conecta directamente al sistema comprometido a través de un puerto abierto.
+
+---
+
+## Fuzzing
+
+Técnica para detectar vulnerabilidades enviando datos aleatorios o inválidos a un sistema.
+
+### Tipos
+- Caja blanca  
+- Caja negra  
+
+### Herramientas
+- Burp Suite  
+- WFuzz  
+- AFL  
+- Peach  
+
+---
+
+# Escaneo Avanzado y Post-Exploitation
+
+## Escalación de Privilegios en Linux
+
+### Técnicas principales
+- SUID  
+- SGID  
+- Sudo  
+- Cron Jobs  
+- PATH Hijacking  
+- Capabilities  
+- Kernel Exploits  
+
+---
+
+## Escalación de Privilegios en Windows
+
+Objetivo: obtener acceso como administrador o SYSTEM.
+
+### Privilegios vulnerables
+- SeImpersonatePrivilege  
+- SeAssignPrimaryTokenPrivilege  
+- SeDebugPrivilege  
+
+### Herramientas comunes
+- PrintSpoofer  
+- JuicyPotato  
+- RoguePotato  
+- GodPotato  
+
+---
+
+## Meterpreter
+
+Herramienta de post-explotación que permite:
+
+- Enumeración del sistema  
+- Escalación de privilegios  
+- Migración de procesos  
+- Obtención de credenciales  
+
+---
+
+# Pivoting
+
+## ¿Qué es Pivoting?
+
+Técnica que permite acceder a redes internas a través de un sistema comprometido.
+
+### Tipos
+- Local Port Forwarding  
+- Remote Port Forwarding  
+- Dynamic Port Forwarding  
+
+---
+
+## Proxychains
+
+Herramienta que permite enrutar tráfico a través de proxies.
+
+### Uso
+- Nmap  
+- curl  
+- sqlmap  
+
+---
+
+## Metasploit y Msfvenom
+
+Herramientas utilizadas para explotación y creación de payloads.
+
+### Payloads comunes
+
+- Windows: windows/meterpreter/reverse_tcp  
+- Linux: linux/x86/meterpreter/reverse_tcp  
+- Android: android/meterpreter/reverse_tcp  
+- Mac: osx/x64/meterpreter/reverse_tcp  
+- PHP: php/meterpreter_reverse_tcp  
+- Python: python/meterpreter/reverse_tcp  
+
+---
+
+# Referencias
+
+- DragonJAR  
+- Liora  
+- Minery Report  
+- Fortinet  
+- Redtiseg  
+- Trend Micro  
